@@ -1,0 +1,105 @@
+#user {
+    width:  800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:     10px;
+}
+
+table {
+    border:					5px solid black;
+    border-collapse:		collapse;
+}
+
+td, th {
+    border:					thin solid black;
+    padding:				18px 2px;
+}
+
+td {
+    font-family:            "Bubblegum Sans";
+}
+
+.judul {
+    width:                  35%;
+}
+
+.isi {
+    width:                  40%;
+
+}
+
+.profil {
+    border:                 5px solid black;
+}
+
+.tebal {
+    border:                 5px solid black;
+    background-color:       black;
+    color:                  white;
+}
+
+td {
+    background-color:       black;
+    color:                  white;
+    border:					thin solid white;
+}
+
+.cash {
+    border:                 5px solid black;
+    background-color:       green;
+    color:                  white;
+}
+
+.cash:hover {
+    background-color: black;
+}
+
+.pembelian {
+    padding:                40px;
+    background-color:       black;
+    color:                  white;
+    border:					2px solid white;
+    font-size:              25px;
+    font-family:            "Bubblegum Sans";
+
+}
+
+.inti {
+    background-color:       white;
+    border:					2px solid black;
+    font-weight:            bolder;
+    color:                  black;
+    padding:                5px;
+    font-family:            Arial;
+}
+.inti2 {
+    background-color:       white;
+    border:					2px solid black;
+    color:                  black;
+    font-weight:            bolder;
+    padding:                5px;
+    width:                  100px;
+    font-family:            Arial;
+
+
+}
+
+.disni {
+    font-weight: bolder;
+}
+
+table #beli {
+    background-color: white;
+    color:            black;
+}
+
+.cair {
+    position:               absolute;
+    top:                    654px;
+    right:                  230px;
+    border:                 none;
+}
+
+.cair a {
+    border:         none;
+}

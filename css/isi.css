@@ -1,0 +1,58 @@
+#kontenisi {
+	margin-left:			120px;
+	margin-right:			120px;
+	margin-top:				40px;
+}
+error { caaa:	
+}
+
+table {
+	border:					thin solid black;
+	border-collapse:		collapse;
+}
+
+td, th {
+	border:					thin solid black;
+	padding:				18px;
+}
+
+th.beli {
+	background-color:		black;
+	font-weight:			bolder;
+	color:					white;
+	padding:				20px;
+}
+
+th.harga {
+	background-color:		#696969;
+	font-weight:			bolder;
+	color:					white;
+	font-style:				italic;
+	padding:				3px;
+}
+
+th.nama {
+	background-color:		black;
+	font-weight:			bolder;
+	color:					white;
+	font-size:				27px;
+	padding-top:			60px;
+	padding-bottom:			20px;
+}
+
+a:visited.nyala {
+	color:					white;
+}
+
+a:link.nyala {
+	color:					white;
+	text-decoration: 		none;
+	border-bottom: 			thin dotted black;
+}
+
+a:hover.nyala {
+	color:					red;
+	font-size:				20px;
+}
+
+

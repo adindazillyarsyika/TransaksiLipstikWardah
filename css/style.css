@@ -1,0 +1,327 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: small;
+    margin: 0px;
+}
+
+header.top {
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 10px 10px 0px 10px;
+    padding: 80px;
+}
+
+div#tableContainer {
+    display: table;
+    border-spacing: 10px;
+}
+
+div#tableRow {
+    display: table-row;
+}
+
+section#menu {
+    color: black;
+    display: table-cell;
+    background-color: black;
+    width: 10%;
+    padding: 0px;
+    vertical-align: top;
+    padding-top: 17px;
+}
+
+section#home {
+    display: table-cell;
+    color: black;
+    background-color: white;
+    width: 60%;
+    font-size: 105%;
+    vertical-align: top;
+    padding: 15px;
+    text-align: center;
+}
+
+aside {
+    text-align: center;
+    display: table-cell;
+    color: black;
+    width: 20%;
+    background-color: white;
+    vertical-align: top;
+    padding: 15px;
+    background-image: url(images/pole.jpg);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    margin: 0px 10px 10px 10px;
+    font-size: 90%;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+    border-bottom: thin dotted black;
+}
+
+a:visited {
+    color: black;
+}
+
+nav {
+    background-color: white;
+    margin: 10px 10px 0px 10px;
+}
+
+nav ul {
+    margin: 0px;
+    list-style-type: none;
+    padding: 5px 0px 5px 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: black;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav ul li.selected {
+    background-color: black;
+}
+
+nav ul li.selected a {
+    color: white;
+}
+
+.pilihan {
+    background-color: black;
+    border: dotted white;
+    color: white;
+    vertical-align: center;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#atas {
+    background-color: white;
+    border: dotted black;
+    color: black;
+}
+
+section#menu {
+    padding-top: 0px;
+}
+
+.populer {
+    padding-top: 15px;
+    font-size: 95%;
+    font-weight: bold;
+}
+
+li.moto {
+    display: inline;
+    padding-let: 30px;
+    padding-right: 30px;
+    width: 50px;
+}
+
+.mkami {
+    padding-top: 20px;
+}
+
+h1.logo {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#logokita {
+    position: absolute;
+    top: -50px;
+    left: 0%;
+}
+
+#logokita2 {
+    position: absolute;
+    top: -600px;
+    right: 0%;
+}
+
+#gratis {
+    position: absolute;
+    top: 4%;
+    left: 30%;
+}
+
+#aman {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+}
+
+#praktis {
+    position: absolute;
+    top: 3%;
+    left: 70%;
+}
+
+section#populer,
+section#kontakKami,
+section#promo {
+    display: table-cell;
+    color: black;
+    background-color: white;
+    width: 1500px;
+    height: 800px;
+    font-size: 105%;
+    vertical-align: top;
+    padding: 15px;
+    text-align: center;
+}
+
+div #kotak {
+    display: table;
+    border-spacing: 10px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+div#baris {
+    display: table-row;
+    border: 1px solid black;
+}
+
+div #kepalaIsi {
+    position: relative;
+    border-bottom: 2px dotted black;
+    font-family: fantasy;
+    font-size: 15px;
+}
+
+errror {
+    color: black;
+    display: table-cell;
+    padding-right: 80px;
+}
+
+div #item1 {
+    display: table-cell;
+    padding-right: 40px;
+    padding-left: 40px;
+    border: 2px dotted black;
+    width: 300px;
+}
+
+div #item2 {
+    display: table-cell;
+    padding-right: 40px;
+    padding-left: 40px;
+    border: 2px dotted black;
+    width: 300px;
+}
+
+div #item1 p {
+    background-color: black;
+    padding: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+div #item2 p {
+    background-color: black;
+    padding: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+div #item1 p.harga {
+    background-color: #696969;
+    margin-top: -10px;
+}
+
+div #item2 p.harga {
+    background-color: #696969;
+    margin-top: -10px;
+}
+
+p.putih {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+h1.promoj {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+    border: 2px solid #696969;
+}
+
+p.promoi {
+    background-color: white;
+    padding: 8px;
+    border-bottom: 2px solid black;
+}
+
+nav.navigasiproduk {
+    border-top: 2px dotted black;
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
+nav.navigasiproduk li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color: black;
+}
+
+nav.navigasiproduk ul li {
+    margin-left: 3px;
+    margin-right: 3px;
+    list-style-type: none;
+    padding: 5px 8px 5px 8px;
+}
+
+nav.navigasiproduk ul li a:link,
+nav.navigasiproduk ul li a:visited {
+    color: white;
+    background-color: black;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+nav.navigasiproduk ul li.apa {
+    background-color: #696969;
+}
+
+nav.navigasiproduk ul li.apa a {
+    color: white;
+}
+
+section#main2 {
+    display: table-cell;
+    color: black;
+    background-color: white;
+    width: 1500px;
+    height: 800px;
+    font-size: 105%;
+    vertical-align: top;
+    padding: 15px;
+    text-align: center;
+}
