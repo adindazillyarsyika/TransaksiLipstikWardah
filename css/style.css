@@ -8,6 +8,7 @@ body {
 
 header.top {
     background-color: white;
+    background-image: url(../images/latar.png);
     color: black;
     text-align: center;
     margin: 10px 10px 0px 10px;
