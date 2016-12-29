@@ -111,8 +111,7 @@ if ($pemakai) {
                                     <div id=\"baris\">
                 						<div id=\"item1\">
                 							<a class=\"menuju\" href=\"showproduk.php?id=$kode_produk[$column]\">
-		    		            				<img src=\"$images[$column]\"
-			    				            		 alt=\"populer2\" width=\"150px\">
+		    		            				<img src=\"images/wardah-m.png\" width=\"150px\">
 				    				            <p>$jenis[$column]</p>
 						    	             </a>
 						                </div>
@@ -122,8 +121,7 @@ if ($pemakai) {
                         
             						    <div id=\"item2\">
 						            	    <a class=\"menuju\" href=\"showproduk.php?idnomor=$kode_produk[$column]\">
-								                <img src=\"$images[$column]\"
-									                alt=\"populer2\" width=\"150px\">
+								                <img src=\"images/wardah-m.png\" width=\"150px\">
 								                <p>$jenis[$column]</p>
 							                </a>
 						                </div>
@@ -139,8 +137,7 @@ if ($pemakai) {
                                     <div id=\"baris\">
                 						<div id=\"item1\">
                 							<a class=\"menuju\" href=\"showproduk.php?idnomor=$kode_produk[$column]\">
-		    		            				<img src=\"$images[$column]\"
-			    				            		 alt=\"populer2\" width=\"150px\">
+		    		            				<img src=\"images/wardah-m.png\" width=\"150px\">
 				    				            <p>$jenis[$column]</p>
 						    	             </a>
 						                </div>
