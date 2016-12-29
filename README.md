@@ -46,7 +46,7 @@ UPDATE penjual SET username = "@dinda" , password="18181819"
 WHERE ID_Penjual = "593111";
 
 <<<<<<< HEAD
-CREATE TABLE Online (
+CREATE TABLE ketikaonline (
 username varchar (20) NOT NULL,
 password varchar (20) NOT NULL,
 PRIMARY KEY (username)
@@ -54,3 +54,6 @@ PRIMARY KEY (username)
 =======
 >>>>>>> 85a2f1f6bebb4716dbf298de5677f2365c4932f0
 >>>>>>> ccde22859fd48f0812cc509d9066c2da94e7d331
+
+
+SELECT username, password FROM penjual WHERE username = '@asroh' && password = '123456712';

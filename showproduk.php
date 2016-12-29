@@ -37,7 +37,6 @@ if ($pemakai) {
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="daftarproduk.php">Daftar Produk</a></li>
         <li><a href="kontakkami.php">Kontak Kami</a></li>
         <?php
         if ($ada == 1) {
