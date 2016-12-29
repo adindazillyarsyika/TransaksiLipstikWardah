@@ -93,9 +93,9 @@ if ($pemakai) {
 </div>
 
 <footer>
-    &copy; 2016 UAS Pemograman WEB I
+    &copy; Transaksi Lipstik waradah
     <br>
-    Dibuat oleh: Agung Santoso(1503113476), Haris Sucipto(1503123272), Mefprizon Muhamad(1503113413).
+   2016.
 </footer>
 
 

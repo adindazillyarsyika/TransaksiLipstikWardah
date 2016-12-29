@@ -42,7 +42,7 @@ if ($pemakai) {
 <head>
     <meta charset="utf-8">
     <title>Tiga Sekawan Online Shop</title>
-    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/pengguna.css">
 </head>
@@ -51,24 +51,9 @@ if ($pemakai) {
 
 <a href="index.php">
     <header class="top">
-
-        <p id="logokita2">
-            <img src="images/logokita2.png" width="300px">
-        </p>
-        <p id="logokita">
-            <img src="images/logokita.png" width="300px">
-        </p>
-        <p id="gratis">
-            <img src="images/gratis3.png" width="200px">
-        </p>
-        <p id="aman">
-            <img src="images/transparan3.png" width="200px">
-        </p>
-        <p id="praktis">
-            <img src="images/aman3.png" width="200px">
-        </p>
-
+        <h1>Waradah Cosmetic</h1>
     </header>
+
 </a>
 
 <nav>
