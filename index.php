@@ -95,6 +95,7 @@ if ($pemakai) {
                         $index++;
                     }
                     
+                    
                     // menghitung isi table
                     $response = @mysqli_query($conn, $sql);                    
                     $jumlah = 0;
@@ -111,7 +112,7 @@ if ($pemakai) {
                                     <div id=\"baris\">
                 						<div id=\"item1\">
                 							<a class=\"menuju\" href=\"showproduk.php?id=$kode_produk[$column]\">
-		    		            				<img src=\"images/wardah-m.png\" width=\"150px\">
+		    		            				<img src=" . $images[$column] . " width=\"150px\">
 				    				            <p>$jenis[$column]</p>
 						    	             </a>
 						                </div>
@@ -120,8 +121,8 @@ if ($pemakai) {
                         echo "
                         
             						    <div id=\"item2\">
-						            	    <a class=\"menuju\" href=\"showproduk.php?idnomor=$kode_produk[$column]\">
-								                <img src=\"images/wardah-m.png\" width=\"150px\">
+						            	    <a class=\"menuju\" href=\"showproduk.php?id=$kode_produk[$column]\">
+								                <img src=" . $images[$column] . " width=\"150px\">
 								                <p>$jenis[$column]</p>
 							                </a>
 						                </div>
@@ -136,8 +137,8 @@ if ($pemakai) {
                                 echo "
                                     <div id=\"baris\">
                 						<div id=\"item1\">
-                							<a class=\"menuju\" href=\"showproduk.php?idnomor=$kode_produk[$column]\">
-		    		            				<img src=\"images/wardah-m.png\" width=\"150px\">
+                							<a class=\"menuju\" href=\"showproduk.php?id=$kode_produk[$column]\">
+		    		            				<img src=" . $images[$column] . " width=\"150px\">
 				    				            <p>$jenis[$column]</p>
 						    	             </a>
 						                </div>

@@ -68,14 +68,14 @@ if ($pemakai) {
                     <?php
 
                     $idnomor = $_GET['id'];
-                    echo $idnomor;
+                   
                     include_once('config.php');
                     
                     $sql = "SELECT * FROM produk WHERE Kode_produk='$idnomor'";
                     $response = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_array($response);
 
-                    echo $row[Kode_produk];
+                    
 
 
                     echo "
@@ -84,7 +84,7 @@ if ($pemakai) {
                         <tr>
                             <th>Kode Produk: </th>
                             <td>" . $row[Kode_produk] . "</td>
-                            <td rowspan=\"5\"><img src=\"$row[linkgambar]\" width=\"250px\">
+                            <td rowspan=\"5\"><img src=" . $row[gambar_produk] . "\" width=\"250px\">
                         </tr>
                         <tr>
                             <th>Kode Warna: </th>
