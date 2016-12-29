@@ -22,7 +22,7 @@ if ($pemakai) {
     <meta charset="utf-8">
     <title>Lipstik Waradah Cosmetic</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/isi.css">
+    <link type="text/css" rel="stylesheet" href="css/tablekontent.css">
 </head>
 
 <body>
@@ -67,53 +67,43 @@ if ($pemakai) {
                 <div id="kontenisi">
                     <?php
 
-                    $idnomor = $_GET['idnomor'];
+                    $idnomor = $_GET['id'];
+                    echo $idnomor;
                     include_once('config.php');
                     
-                    $sql = "SELECT * FROM nikon WHERE idnomor=$idnomor";
+                    $sql = "SELECT * FROM produk WHERE Kode_produk='$idnomor'";
                     $response = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_array($response);
 
+                    echo $row[Kode_produk];
+
+
                     echo "
                         
-                    <table border=\"1px\">
+                    <table class=showProduK border=\"1px\">
                         <tr>
-                            <span id=\"nikon\"><th colspan=\"3\" class=\"nama\">$row[nama]</th></span>
+                            <th>Kode Produk: </th>
+                            <td>" . $row[Kode_produk] . "</td>
+                            <td rowspan=\"5\"><img src=\"$row[linkgambar]\" width=\"250px\">
                         </tr>
                         <tr>
-                            <th>Effective Pixel</th>
-                            <td>$row[effectivePixel]</td>
-                            <td rowspan=\"7\"><img src=\"$row[linkgambar]\" width=\"250px\">
+                            <th>Kode Warna: </th>
+                            <td>" . $row[kode_warna] . "</th>
                         </tr>
                         <tr>
-                            <th>Mount</th>
-                            <td>$row[mount]</th>
+                            <th>Merk: </th>
+                            <td>" . $row[merk] . "</td>
                         </tr>
                         <tr>
-                            <th>Type</th>
-                            <td>$row[type]</td>
+                            <th>Jenis: </th>
+                            <td>" . $row[jenis] . "</td>
                         </tr>
                         <tr>
-                            <th>Sensor type</th>
-                            <td>$row[sensorType]</td>
+                            <th>Netto: </th>
+                            <td>" . $row[netto] . "</th>
                         </tr>
                         <tr>
-                            <th>Total Pixel</th>
-                            <td>$row[totalPixel]</th>
-                        </tr>
-                        <tr>
-                            <th>Resolution</th>
-                            <td>$row[resolution]</td>
-                        </tr>
-                        <tr>
-                            <th>AF-Assist Lamp</th>
-                            <td>$row[afassistlamp]</td>
-                        </tr>
-                        <tr>
-                            <th colspan=\"3\" class=\"harga\">Rp.$row[harga].000,-</th>
-                        </tr>
-                        <tr>
-                            <th colspan=\"3\" class=\"beli\">";
+                            <th colspan=\"5\" class=\"beli\">";
 
                             if ($ada == 1) {
                                 echo " <a class=\"nyala\" href=\"beli.php?idnomor=$idnomor&&merek=nikon\"
@@ -137,7 +127,7 @@ if ($pemakai) {
             </article>
         </section>
 
-                <aside>
+                        <aside>
             <h1 class="promoj">
                 Promo Prouduct Pilihan
             </h1>
