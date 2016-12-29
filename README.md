@@ -34,3 +34,8 @@ WHERE ID_Penjual = "734682";
 UPDATE penjual SET username = "@dinda" , password="18181819"
 WHERE ID_Penjual = "593111";
 
+CREATE TABLE Online (
+username varchar (20) NOT NULL,
+password varchar (20) NOT NULL,
+PRIMARY KEY (username)
+);
