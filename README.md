@@ -17,3 +17,13 @@ UPDATE produk SET gambar_produk = "\"images/wardah-lipbalm-strawberry.jpg\""
 WHERE Kode_produk = "203975";
 UPDATE produk SET gambar_produk = "\"images/wardah-longlasting.jpg\"" 
 WHERE Kode_produk = "123456";
+
+
+# bikin table online
+CREATE TABLE online (
+    ID_Penjual varchar(20) NOT NULL,
+    username varchar(20) NOT NULL,
+    password varchar(20) NOT NULL,
+    PRIMARY KEY(username),
+    FOREIGN KEY (ID_Penjual) REFERENCES Penjual(ID_Penjual)
+);
