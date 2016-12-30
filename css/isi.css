@@ -1,0 +1,39 @@
+table {
+    border: thin solid black;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    color: #42a1af;
+    border: thin solid #42a1af;
+    padding: 18px;
+}
+
+table#user {
+    margin: 20px auto;
+    width: 500px;
+}
+
+.btable {
+    background: #42a1af;
+    color: white;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+th.btable {
+    color: white;
+}
+
+td.inti a {
+    color: #42a1af;
+    border: none;
+}
+
+th a.nyala {
+    color: white;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 6px;
+}

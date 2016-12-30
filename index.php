@@ -27,10 +27,11 @@ if ($pemakai) {
 </head>
 
 <body>
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
 
 <a href="index.php">
     <header class="top">
-        <h1>Waradah Cosmetic</h1>
+        <img src="images/wardah-logo.png" width="50%">
     </header>
 </a>
 
@@ -63,16 +64,7 @@ if ($pemakai) {
             <article>
                 <div id="kepalaIsi">
                     <p class="selamat">
-                        Kategori Merek Nikon......
-
-                    <div id="mesinpencari">
-                      <form method="post" action="pencariannikon.php">
-                        <input type="text" id="pencarian" name="pencarian">
-                        <input type="submit" id="Cari" name="cari" value="Cari">
-                      </form>
-                    </div>
-                    </p>
-                </div>
+                        List Produk Lipstic Wardah Cosmetic......
                 <div id="kotak">
 
                     <?php
@@ -192,7 +184,7 @@ if ($pemakai) {
 </div>
 
 <footer>
-    &copy; Transaksi Lipstik waradah
+    &copy; Lipstic Wardah Cosmetic
     <br>
    2016.
 </footer>

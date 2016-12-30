@@ -57,3 +57,5 @@ PRIMARY KEY (username)
 
 
 SELECT username, password FROM penjual WHERE username = '@asroh' && password = '123456712';
+
+warna #42a1af;

@@ -1,18 +1,13 @@
 <?php
 include_once('config.php');
-$username = $_POST['pengguna'];
-$password = $_POST['katasandi'];
 
 $sql = "SELECT * FROM online";
 $response = mysqli_query($conn, $sql);
-$lihat =mysqli_fetch_array($response);
+$pemakai = mysqli_fetch_array($response);
 
+$username = $pemakai['username'];
+$password = $pemakai['password'];
 
-if(!$lihat) {
-    $sql = "INSERT INTO online VALUES ('$username', '$password')";
-    $response = mysqli_query($conn, $sql);
-    echo $response[username];
-}
 
 @$sql = "SELECT * FROM penjual WHERE username = '$username' && password = '$password'";
 $response = mysqli_query($conn, $sql); // mastikan kondisi true
@@ -20,13 +15,6 @@ $row = mysqli_fetch_array($response);
 
 
 $ID_Penjual = $row[ID_Penjual];
-$ada = 0;
-
-$sql = "SELECT * FROM online";
-$response = mysqli_query($conn, $sql);
-$pemakai = mysqli_fetch_array($response);
-
-$username = $pemakai['username'];
 
 //bilang pengguna aktif
 if ($pemakai) {
@@ -35,19 +23,20 @@ if ($pemakai) {
 
 ?>
 
+
+
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</title>
+    <title>Lipstic Wardah Cosmetic</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
-    <link type="text/css" rel="stylesheet" href="css/formstyling.css">
     <link type="text/css" rel="stylesheet" href="css/isi.css">
 </head>
 
 <body>
-<marquee>Selamat Datang</marquee>
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
 <a href="index.php">
     <header class="top">
         <img src="images/wardah-logo.png" width="50%">
@@ -61,12 +50,8 @@ if ($pemakai) {
         <?php
         if ($ada == 1 && $row) {
             echo "
-            <li class=\"selected\"><span class=\"disni\"><a href='#'>$username</a></span></li>
+            <li class=\"selected\"><span class=\"disni\"><a href=\"member.php\">$username</a></span></li>
             <li><a href=\"keluar.php\">Keluar</a></li>
-            ";
-        } else {
-            echo "
-            <li class=\"selected\"><span class=\"disni\">Masuk</a></span></li>
             ";
         }
         ?>
@@ -145,23 +130,19 @@ if ($pemakai) {
                         echo "</table>
                                </div>";
                     } else {
+                        echo "
+                              <div id=\"kepalaIsi\">
+                                <p class=\"terimakasih\">
+							    <span id=\"parkir\">
+							        Error
+							    </span>
+                                </p>
+                                </div>
+                        ";
+                        echo "<br><br>Password atau Nama Pengguna Anda Salah, <a href='login.php' style='color:blue'> kembali</a>
+                                <br><br><br><br><br><br><br><br><br>";
                         $sql = "DELETE FROM online";
                         $response = mysqli_query($conn, $sql);
-                         echo "
-                             <div id=\"login\">
-                                <form action=\"pengguna.php\" method=\"post\">
-                                    <label for=\"pengguna\">Username:</label><input type=\"text\" id=\"pengguna\" name=\"pengguna\" maxlength=\"12\">
-                                    <label for=\"pasowrd\">Password:</label><input type=\"text\" id=\"katasandi\" name=\"katasandi\" maxlength=\"20\" value='123456712'>
-                                    <input type=\"submit\" name=\"masuk\" value=\"masuk\">
-                                </form>
-                            </div>
-                            <p>Belum Punya Akun? Silahkan Mendaftar <a href=\"daftar.php\" style=\"font-weight: bolder\">disni</a></p>
-                            </div>                        
-                        ";
-
-                        echo "<script type='text/javascript'>alert('Error, Password atau Nama Pengguna Anda Salah, Silahkan cek kembali!');</script>";
-                        
-                        
                     }
                     if ($ada == 1)
                 mysqli_close($conn);
@@ -171,13 +152,14 @@ if ($pemakai) {
     </div>
     </article>
     </section>
+
 </div>
 </div>
 <footer>
-    &copy; Lipstic Wardah Cosmetic
+    &copy; Transaksi Lipstik waradah
     <br>
    2016.
-</footer>>
+</footer>
 
 
 

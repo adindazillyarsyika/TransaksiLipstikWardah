@@ -20,16 +20,17 @@ if ($pemakai) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Lipstik Waradah Cosmetic</title>
+    <title>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/tablekontent.css">
+    <link type="text/css" rel="stylesheet" href="css/isi.css">
 </head>
 
 <body>
-
+<marquee>Selamat Datang</marquee>
 <a href="index.php">
     <header class="top">
-        <h1>Waradah Cosmetic</h1>
+        <img src="images/wardah-logo.png" width="50%">
     </header>
 </a>
 
@@ -37,7 +38,7 @@ if ($pemakai) {
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="kontakkami.php">Kontak Kami</a></li>
+        <li><a href="kontak.php">Kontak Kami</a></li>
         <?php
         if ($ada == 1) {
             echo "
@@ -81,31 +82,31 @@ if ($pemakai) {
                         
                     <table class=showProduK border=\"1px\">
                         <tr>
-                            <th>Kode Produk: </th>
+                            <th class='btable' >Kode Produk: </th>
                             <td>" . $row[Kode_produk] . "</td>
                             <td rowspan=\"5\"><img src=" . $row[gambar_produk] . "\" width=\"250px\">
                         </tr>
                         <tr>
-                            <th>Kode Warna: </th>
+                            <th class='btable'>Kode Warna: </th>
                             <td>" . $row[kode_warna] . "</th>
                         </tr>
                         <tr>
-                            <th>Merk: </th>
+                            <th class='btable'>Merk: </th>
                             <td>" . $row[merk] . "</td>
                         </tr>
                         <tr>
-                            <th>Jenis: </th>
+                            <th class='btable'>Jenis: </th>
                             <td>" . $row[jenis] . "</td>
                         </tr>
                         <tr>
-                            <th>Netto: </th>
+                            <th class='btable'>Netto: </th>
                             <td>" . $row[netto] . "</th>
                         </tr>
                         <tr>
-                            <th colspan=\"5\" class=\"beli\">";
+                            <th colspan=\"5\" class='btable'>";
 
                             if ($ada == 1) {
-                                echo " <a class=\"nyala\" href=\"beli.php?idnomor=$idnomor&&merek=nikon\"
+                                echo " <a class=\"nyala\" href=\"beli.php?id=" . $row[Kode_produk] . "
                                         alt = \"beli sekarang\" title = \"beli sekarang\" > BELI</a >
                     ";
                             }else{
@@ -167,7 +168,7 @@ if ($pemakai) {
 </div>
 
 <footer>
-    &copy; Transaksi Lipstik waradah
+    &copy; Lipstic Wardah Cosmetic
     <br>
    2016.
 </footer>

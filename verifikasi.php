@@ -19,42 +19,23 @@ if ($pemakai) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Tiga Sekawan Online Shop</title>
-    <link type="text/css" rel="stylesheet" href="styles.css">
+    <title>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
-    <link type="text/css" rel="stylesheet" href="css/formstyling.css">
     <link type="text/css" rel="stylesheet" href="css/pengguna.css">
 </head>
 
 <body>
-
-<a href="index.php">
+<marquee>Selamat Datang</marquee>
     <header class="top">
-
-        <p id="logokita2">
-            <img src="images/logokita2.png" width="300px">
-        </p>
-        <p id="logokita">
-            <img src="images/logokita.png" width="300px">
-        </p>
-        <p id="gratis">
-            <img src="images/gratis3.png" width="200px">
-        </p>
-        <p id="aman">
-            <img src="images/transparan3.png" width="200px">
-        </p>
-        <p id="praktis">
-            <img src="images/aman3.png" width="200px">
-        </p>
-
+        <img src="images/wardah-logo.png" width="50%">
     </header>
-</a>
 
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="daftarproduk.php">Daftar Produk</a></li>
-        <li><a href="kontakkami.php">Kontak Kami</a></li>
+        <li><a href="kontak.php">Kontak Kami</a></li>
         <?php
         if ($ada == 1) {
             echo "
@@ -69,6 +50,7 @@ if ($pemakai) {
 
 <div id="tableContainer">
     <div id="tableRow">
+                                    
 
         <section id="main4">
             <article>
@@ -79,54 +61,28 @@ if ($pemakai) {
                                 <br><br><br><br><br><br><br><br><br>";
                 }  else {
 
-                    $pusername = $_POST['pengguna'];
-                    if (!$pusername) {
+                    $nama_toko= $_POST['nama_toko'];
+                    if (!$nama_toko) {
+                        $valid[] = 'nama_toko';
+                    }
+                    $alamat_toko = $_POST['alamat_toko'];
+                    if (!$alamat_toko) {
+                        $valid[] = 'alamat_toko';
+                    }
+                    $username = $_POST['username'];
+                    if (!$username) {
                         $valid[] = 'username';
                     }
-                    $ppassword = $_POST['katasandi'];
-                    if (!$ppassword) {
-                        $valid[] = 'passoword';
-                    }
-                    $pnama = $_POST['namalengkap'];
-                    if (!$pnama) {
-                        $valid[] = 'Nama Lengkap';
-                    }
-                    $ptelepon = $_POST['telepon'];
-                    if (!$pusername) {
-                        $valid[] = 'telepon';
+                    $password = $_POST['password'];
+                    if (!$password) {
+                        $valid[] = 'password';
                     }
                     date_default_timezone_set('UTC');
-                    $pmebersejak = date('Y-m-d');
-                    $palamat = $_POST['alamat'];
-                    if (!$palamat) {
-                        $valid[] = 'alamat';
+                    $ID_Penjual = date('Ydm') . date('his');
+                    if (!$ID_Penjual) {
+                        $valid[] = 'ID_Penjual';
                     }
-                    $pprovinsi = $_POST['provinsi'];
-                    if (!$pprovinsi) {
-                        $valid[] = 'provinsi';
-                    }
-                    $pkabupaten = $_POST['kabupaten'];
-                    if (!$pkabupaten) {
-                        $valid[] = 'kabupaten';
-                    }
-                    $pkodepos = $_POST['kodepos'];
-                    if (!$pusername) {
-                        $valid[] = 'kodepos';
-                    }
-                    $psaldo = 0;
-
-                    $photo;
-
-                    if ($_FILES)
-                    {
-                        $photo = $_FILES['filename']['name'];
-                        move_uploaded_file($_FILES['filename']['tmp_name'], $photo);
-                    }
-                    if (!$photo) {
-                        $valid[] = 'photo';
-                    }
-
-
+                    
                     if (isset($valid)) {
                         echo "
                               <div id=\"kepalaIsi\">
@@ -146,7 +102,11 @@ if ($pemakai) {
                                 <br><br><br><br><br><br><br><br><br>";
 
                     } else {
-                        echo "
+                        $sql = "INSERT INTO penjual VALUES 
+                            ('$ID_Penjual', '$nama_toko', '$alamat_toko' , '$username', '$password')";
+                        $response = mysqli_query($conn, $sql);
+                        if ($response) {
+                            echo "
                               <div id=\"kepalaIsi\">
                                 <p class=\"terimakasih\">
 							    <span id=\"parkir\">
@@ -158,10 +118,20 @@ if ($pemakai) {
                         echo "<br><br>Anda Berhasil Mendaftar, Silahkan Klik login<a href='login.php' style='color:blue'>login</a>
                                 untuk Masuk
                                 <br><br><br><br><br><br><br><br><br>";
-                        $sql = "INSERT INTO pengguna VALUES 
-                            ('$pusername', '$ppassword', '$pnama' , '$ptelepon', '$pmebersejak',
-                              '$palamat', '$pprovinsi', '$pkabupaten', '$pkodepos', '$psaldo', '$photo')";
-                        $response = mysqli_query($conn, $sql);
+
+                        } else {
+                            echo "
+                              <div id=\"kepalaIsi\">
+                                <p class=\"terimakasih\">
+							    <span id=\"parkir\">
+							        Pendaftaran Gagal
+							    </span>
+                                </p>
+                                </div>
+                            ";
+                             echo "</span><br> Silahkan <a href='daftar.php' style='color:blue'>Daftar </a>kembali
+                                <br><br><br><br><br><br><br><br><br>";
+                        }
 
                     }
                 }
@@ -177,13 +147,14 @@ if ($pemakai) {
 </div>
 
 <footer>
-    &copy; 2016 UAS Pemograman WEB I
+    &copy; Lipstic Wardah Cosmetic
     <br>
-    Dibuat oleh: Agung Santoso(1503113476), Haris Sucipto(1503123272), Mefprizon Muhamad(1503113413).
+   2016.
 </footer>
+
 
 
 
 </body>
 
-//
+

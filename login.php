@@ -18,17 +18,17 @@ if ($pemakai) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Lipstik Waradah Cosmetic</title>
+    <title>Lipstic Wardah Cosmetic</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/formstyling.css">
 </head>
 
 <body>
-
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
 <a href="index.php">
     <header class="top">
-        <h1>Waradah Cosmetic</h1>
+        <img src="images/wardah-logo.png" width="50%">
     </header>
 </a>
 
@@ -71,7 +71,7 @@ if ($pemakai) {
                              <div id=\"login\">
                                 <form action=\"pengguna.php\" method=\"post\">
                                     <label for=\"pengguna\">Username:</label><input type=\"text\" id=\"pengguna\" name=\"pengguna\" maxlength=\"12\">
-                                    <label for=\"pasowrd\">Password:</label><input type=\"text\" id=\"katasandi\" name=\"katasandi\" maxlength=\"20\">
+                                    <label for=\"pasowrd\">Password:</label><input type=\"text\" id=\"katasandi\" name=\"katasandi\" maxlength=\"20\" value='123456712'>
                                     <input type=\"submit\" name=\"masuk\" value=\"masuk\">
                                 </form>
                             </div>

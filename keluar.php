@@ -6,14 +6,11 @@ $response = mysqli_query($conn, $sql);
 $pemakai = mysqli_fetch_array($response);
 
 $username = $pemakai['username'];
-$password = $pemakai['password'];
 
 //bilang pengguna aktif
 if ($pemakai) {
     $ada = 1;
 }
-
-mysqli_close($conn);
 
 ?>
 
@@ -22,12 +19,12 @@ mysqli_close($conn);
 <head>
     <meta charset="utf-8">
     <title>Lipstic Wardah Cosmetic</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/formstyling.css">
     <link type="text/css" rel="stylesheet" href="css/pengguna.css">
-
 </head>
+
 
 <body>
 <marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
@@ -40,19 +37,16 @@ mysqli_close($conn);
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li class="selected"><span class="disni"><a href="kontakkami.php">Kontak Kami</a></span></li>
+        <li><a href="kontak.php">Kontak Kami</a></li>
+        <li><a href=login.php>Masuk</a></li>
         <?php
         if ($ada == 1) {
             echo "
-            <li><a href=\"member.php\">$username</a></li>
-            <li><a href=\"keluar.php\">Keluar</a></li>
-            ";
-        } else {
-            echo "
-                <li><a href=\"login.php\">Masuk</a></li>
+            <li class=\"selected\"><span class=\"disni\">Keluar</a></span></li>
             ";
         }
         ?>
+
     </ul>
 </nav>
 
@@ -61,24 +55,36 @@ mysqli_close($conn);
 
         <section id="main4">
             <article>
-                <div id="about">
-                    <h2>Dibuat oleh:</h2>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                </div>
-            </article>
-        </section>
+                <?php
+                if ($ada == 1) {
+                    echo "<br><br><br><br>
+                                $username anda telah keluar, Klik <a href='login.php' style='color:blue'>Masuk</a> 
+                                Untuk login Kembali
+                                <br><br><br><br><br><br><br><br><br>";
+
+                    $sql = "DELETE FROM online";
+                    $response = mysqli_query($conn, $sql);
+                } else {
+                    echo "<br><br><br><br>
+                                Halo Tamu, Anda Belum Masuk, Silahkan Klik <a href='login.php' style='color:blue'>Masuk</a> 
+                                Untuk login Kembali
+                                <br><br><br><br><br><br><br><br><br>";
+                }
+                mysqli_close($conn);
+                ?>
 
     </div>
+    </article>
+    </section>
+
+</div>
+</div>
 
 <footer>
     &copy; Lipstic Wardah Cosmetic
     <br>
    2016.
-</footer>>
+</footer>
 
 
 </body>

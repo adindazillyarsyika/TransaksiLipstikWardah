@@ -18,41 +18,24 @@ if ($pemakai) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Tiga Sekawan Online Shop</title>
-    <link type="text/css" rel="stylesheet" href="styles.css">
+    <title>Lipstik Wardah Cosmetic</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/formstyling.css">
 </head>
 
 <body>
-
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
 <a href="index.php">
     <header class="top">
-
-        <p id="logokita2">
-            <img src="images/logokita2.png" width="300px">
-        </p>
-        <p id="logokita">
-            <img src="images/logokita.png" width="300px">
-        </p>
-        <p id="gratis">
-            <img src="images/gratis3.png" width="200px">
-        </p>
-        <p id="aman">
-            <img src="images/transparan3.png" width="200px">
-        </p>
-        <p id="praktis">
-            <img src="images/aman3.png" width="200px">
-        </p>
-
+        <img src="images/wardah-logo.png" width="50%">
     </header>
 </a>
 
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="daftarproduk.php">Daftar Produk</a></li>
-        <li><a href="kontakkami.php">Kontak Kami</a></li>
+        <li><a href="kontak.php">Kontak Kami</a></li>
         <?php
         if ($ada != 1) {
             echo "
@@ -87,15 +70,10 @@ if ($pemakai) {
                     echo "
                              <div id=\"login\">
                                 <form action=\"verifikasi.php\" method=\"post\" enctype='multipart/form-data'>
-                                    <label for=\"pengguna\">Username:</label><input type=\"text\" id=\"pengguna\" name=\"pengguna\" maxlength=\"12\">
-                                    <label for=\"pasowrd\">Password:</label><input type=\"text\" id=\"katasandi\" name=\"katasandi\" maxlength=\"8\">
-                                    <label for='namalengkap'>Nama Lengkap:</label><input type='text' id='namalengkap' name='namalengkap' maxlength='20'>
-                                    <label for='alamat'>Alamat:</label><input type='text' id='alamat' name='alamat' maxlength='20'>
-                                    <label for='alamat'>Nomor Telepon:</label><input type='text' id='telepon' name='telepon' maxlength='12'>
-                                    <label for='provinsi'>Provinsi:</label><input type='text' id='provinsi' name='provinsi' maxlength='16'>
-                                    <label for='kabupaten'>Kabupaten:</label><input type='text' id='kabupaten' name='kabupaten' maxlength='16'>
-                                    <label for='kodepos'>Kodepos:</label><input type='text' id='kodepos' name='kodepos' maxlength='5'>
-                                    <label for='photo'>Photo Profil: </label> <input type='file' name='filename'>
+                                    <label for=\"nama_toko\">Nama Toko:</label><input type=\"text\" id=\"nama_toko\" name=\"nama_toko\" maxlength=\"50\">
+                                    <label for=\"alamat_toko\">Alamat Toko:</label><input type=\"text\" id=\"alamat_toko\" name=\"alamat_toko\" maxlength=\"50\">
+                                    <label for='username'>Username</label><input type='text' id='username' name='username' maxlength='20'>
+                                    <label for='password'>Password:</label><input type='text' id='password' name='password' maxlength='20'>
                                     <input type=\"submit\" name=\"masuk\" value=\"Daftar\">
                                 </form>
                             </div>
@@ -118,10 +96,11 @@ if ($pemakai) {
 </div>
 
 <footer>
-    &copy; 2016 UAS Pemograman WEB I
+    &copy; Lipstic Wardah Cosmetic
     <br>
-    Dibuat oleh: Agung Santoso(1503113476), Haris Sucipto(1503123272), Mefprizon Muhamad(1503113413).
-</footer>
+   2016.
+</footer>>
+
 
 
 </body>

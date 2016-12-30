@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-image: url(../images/latar.png);
     color: white;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: small;
@@ -7,7 +7,6 @@ body {
 }
 
 header.top {
-    background-color: white;
     background-image: url(../images/latar.png);
     color: black;
     text-align: center;
@@ -27,7 +26,7 @@ div#tableRow {
 section#menu {
     color: black;
     display: table-cell;
-    background-color: black;
+    background-color: #42a1af;
     width: 10%;
     padding: 0px;
     vertical-align: top;
@@ -57,8 +56,9 @@ aside {
 }
 
 footer {
-    background-color: black;
-    color: white;
+    background-image: url(../images/latar.png);
+    color: #42a1af;
+    font-weight: bolder;
     text-align: center;
     padding: 8px;
     margin: 0px 10px 10px 10px;
@@ -93,13 +93,13 @@ nav ul li {
 
 nav ul li a:link,
 nav ul li a:visited {
-    color: black;
+    color: #42a1af;
     border-bottom: none;
     font-weight: bold;
 }
 
 nav ul li.selected {
-    background-color: black;
+    background-color: #42a1af;
 }
 
 nav ul li.selected a {
@@ -107,7 +107,7 @@ nav ul li.selected a {
 }
 
 .pilihan {
-    background-color: black;
+    background-color: #42a1af;
     border: dotted white;
     color: white;
     vertical-align: center;
@@ -207,7 +207,7 @@ div#baris {
 
 div #kepalaIsi {
     position: relative;
-    border-bottom: 2px dotted black;
+    border-bottom: 1px dotted #42a1af;
     font-family: fantasy;
     font-size: 15px;
 }
@@ -222,7 +222,7 @@ div #item1 {
     display: table-cell;
     padding-right: 40px;
     padding-left: 40px;
-    border: 2px dotted black;
+    border: 1px dotted #42a1af;
     width: 300px;
 }
 
@@ -230,21 +230,19 @@ div #item2 {
     display: table-cell;
     padding-right: 40px;
     padding-left: 40px;
-    border: 2px dotted black;
+    border: 1px dotted #42a1af;
     width: 300px;
 }
 
 div #item1 p {
-    background-color: black;
+    background-color: #42a1af;
     padding: 6px;
-    font-weight: bold;
     color: white;
 }
 
 div #item2 p {
-    background-color: black;
+    background-color: #42a1af;
     padding: 6px;
-    font-weight: bold;
     color: white;
 }
 
@@ -260,27 +258,26 @@ div #item2 p.harga {
 
 p.putih {
     color: white;
-    background-color: black;
+    background-color: #42a1af;
     font-weight: bold;
     padding: 10px;
 }
 
 h1.promoj {
-    background-color: black;
+    background-color: #42a1af;
     color: white;
     padding: 5px;
     font-weight: bolder;
-    border: 2px solid #696969;
 }
 
 p.promoi {
     background-color: white;
     padding: 8px;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid #42a1af;
 }
 
 nav.navigasiproduk {
-    border-top: 2px dotted black;
+    border-top: 2px dotted #42a1af;
     padding-top: 20px;
     font-weight: bolder;
 }
@@ -289,7 +286,7 @@ nav.navigasiproduk li {
     display: inline;
     padding: 5px 10px 5px 10px;
     color: white;
-    background-color: black;
+    background-color: #42a1af;
 }
 
 nav.navigasiproduk ul li {
@@ -302,7 +299,7 @@ nav.navigasiproduk ul li {
 nav.navigasiproduk ul li a:link,
 nav.navigasiproduk ul li a:visited {
     color: white;
-    background-color: black;
+    background-color: #42a1af;
     border-bottom: none;
     font-weight: bold;
 }
@@ -325,4 +322,23 @@ section#main2 {
     vertical-align: top;
     padding: 15px;
     text-align: center;
+}
+
+.kontak {
+    background: white;
+    width: 100%;
+}
+
+marquee {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+section#home {
+    color: #42a1af;
+}
+
+h1.promoj {
+    border: none;
 }

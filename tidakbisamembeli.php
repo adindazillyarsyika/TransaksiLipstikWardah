@@ -12,17 +12,15 @@ $password = $pemakai['password'];
 if ($pemakai) {
     $ada = 1;
 }
-
-mysqli_close($conn);
-
 ?>
+
 
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Lipstic Wardah Cosmetic</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Tiga Sekawan Online Shop</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/formstyling.css">
     <link type="text/css" rel="stylesheet" href="css/pengguna.css">
@@ -40,7 +38,7 @@ mysqli_close($conn);
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li class="selected"><span class="disni"><a href="kontakkami.php">Kontak Kami</a></span></li>
+        <li><a href="kontak.php">Kontak Kami</a></li>
         <?php
         if ($ada == 1) {
             echo "
@@ -56,23 +54,33 @@ mysqli_close($conn);
     </ul>
 </nav>
 
+
 <div id="tableContainer">
     <div id="tableRow">
 
         <section id="main4">
             <article>
-                <div id="about">
-                    <h2>Dibuat oleh:</h2>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
-                    <p>Nama nim</p>
+                <?php
+                    echo "
+                                <div id=\"kepalaIsi\">
+                                <p class=\"terimakasih\">
+							    <span id=\"parkir\">
+							        Error
+							    </span>
+                                </p>
+                                </div>
+       
+                    ";
+                ?>
+                    <br>Anda Tidak Bisa Membeli , Harap <a href='login.php' style='color:blue'> Masuk</a>
+                                Terlebih dahulu <br><br><br><br><br><br><br><br><br>
+
                 </div>
             </article>
-        </section>
+    </section>
 
-    </div>
+</div>
+</div>
 
 <footer>
     &copy; Lipstic Wardah Cosmetic

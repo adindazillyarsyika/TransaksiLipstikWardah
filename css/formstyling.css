@@ -1,32 +1,32 @@
-#login{
-    margin-top:         -6px;
-    text-align:         left;
-    font-size:          18px;
+#login {
+    margin-top: -6px;
+    text-align: left;
+    font-size: 18px;
     font-family: 'Bubblegum Sans', monospace;
-    width:              500px;
-    margin-left:        auto;
-    margin-right:       auto;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 400;
-
 }
 
-input[type=text], input[type=password] {
-    width:          100%;
-    padding:        5px 5px;
-    margin:         8px 0px;
-    display:        inline-block;
-    border:         1px solid black;
-    border-radius:  4px;
-    box-sizing:     border-box;
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #42a1af;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type=submit] {
-    width:              100%;
-    background-color:   #000000;
-    color:              white;
-    padding:            14px 20px;
-    margin:             12px 0px;
-    cursor:             pointer;
+    width: 100%;
+    background-color: #42a1af;
+    color: white;
+    padding: 14px 20px;
+    margin: 12px 0px;
+    cursor: pointer;
 }
 
 input[type=submit]:hover {
@@ -37,80 +37,13 @@ li {
     font-weight: bolder;
 }
 
-
-#beli{
-    margin-top:         -6px;
-    text-align:         left;
-    font-size:          18px;
+#beli {
+    margin-top: -6px;
+    text-align: left;
+    font-size: 18px;
     font-family: 'Bubblegum Sans', monospace;
-    width:              350px;
-    margin-left:        auto;
-    margin-right:       auto;
-    font-weight: 400;
-
-}
-
-#isiulang {
-    width:              500px;
-    margin-top:         -6px;
-    text-align:         left;
-    font-size:          18px;
-    font-family: 'Bubblegum Sans', monospace;
-    margin-left:        auto;
-    margin-right:       auto;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 400;
 }
-
-#isiulang input[type=text],#isulang input[type=password] {
-    width:          60%;
-    padding:        5px 5px;
-    margin:         8px 0px;
-    display:        inline-block;
-    border:         1px solid black;
-    border-radius:  4px;
-    box-sizing:     border-box;
-}
-
-#isiulang input[type=submit] {
-    width:              100%;
-    background-color:   #000000;
-    color:              white;
-    padding:            14px 20px;
-    margin:             12px 0px;
-    cursor:             pointer;
-    margin-top:        30px;
-    font-weight:        bolder;
-}
-
-#isiulang input[type=submit]:hover {
-    background-color: grey;
-}
-.cash a {
-    color:          white;
-}
-
-.ketengah input[type=number] {
-    font-weight: bolder;
-    font-size:         17px;
-}
-
-.ketengah {
-    text-align: center;
-    font-weight: bolder;
-    font-size:         18px;
-}
-
-#cairkanm input[type=submit] {
-    width:              40%;
-    background-color:   #000000;
-    color:              white;
-    padding:            8px 20px;
-    margin:             12px 0px;
-    cursor:             pointer;
-    margin-top:        30px;
-    font-weight:        bolder;
-}
-#cairkanm {
-    text-align: center;
-}
-
