@@ -23,7 +23,6 @@ if ($pemakai) {
     <title>Lipstik Waradah Cosmetic</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/halamannyala.css">
-    <link type="text/css" rel="stylesheet" href="css/pencarian.css">
 </head>
 
 <body>
@@ -145,38 +144,28 @@ if ($pemakai) {
 
         <aside>
             <h1 class="promoj">
-                Promo Prouduct Pilihan
+                SHOWLIST
             </h1>
 
-            <a href="nikon.php?idnomor=1#nikon">
                 <div class="populer">
-                    <img src=""
-                         alt="populer2" width="150px">
-                    <p class="promoi">Produk 1</p>
+                    <img src="images/iklan1.jpg"
+                         alt="populer2" width="100%"
+                    >
                 </div>
-            </a>
 
-            <a href="canon.php?idnomor=1#canon">
                 <div class="populer">
-                    <img src=""
-                         alt="populer" width="150px">
-                    <p class="promoi">Produk 2</p>
+                    <img src="images/iklan2.jpg"
+                         alt="populer2" width="100%">
                 </div>
-            </a>
 
-            <a href="samsung.php?idnomor=1#samsung">
                 <div class="populer">
-                    <img src=""
-                         alt="populer" width="150px">
-                    <p class="promoi">Produk 3</p>
+                    <img src="images/iklan3.jpg"
+                         alt="populer2" width="100%">
                 </div>
-            </a>
 
-            <a href="sony.php?idnomor=1#sony">
                 <div class="populer">
-                    <img src=""
-                         alt="populer" width="150px">
-                    <p class="promoi">Produk 4</p>
+                    <img src="images/ilkan.jpg"
+                         alt="populer2" width="100%">
                 </div>
             </a>
         </aside>

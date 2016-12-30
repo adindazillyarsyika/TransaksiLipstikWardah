@@ -19,17 +19,19 @@ if ($pemakai) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</title>
+    <title>Lipstic Wardah Cosmetic</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/pengguna.css">
 </head>
 
 <body>
-<marquee>Selamat Datang</marquee>
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
+<a href="index.php">
     <header class="top">
         <img src="images/wardah-logo.png" width="50%">
     </header>
+</a>
 
 <nav>
     <ul>

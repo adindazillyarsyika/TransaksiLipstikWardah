@@ -37,7 +37,7 @@ mysqli_query($conn, $sql);
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Tiga Sekawan Online Shop</title>
+    <title>Lipstic Wardah Cosmetic</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
 </head>

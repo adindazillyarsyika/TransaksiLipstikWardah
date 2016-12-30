@@ -47,7 +47,7 @@ if ($pemakai) {
 </head>
 
 <body>
-<marquee>Selamat Datang</marquee>
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
 <a href="index.php">
     <header class="top">
         <img src="images/wardah-logo.png" width="50%">

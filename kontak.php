@@ -24,8 +24,6 @@ mysqli_close($conn);
     <title>Lipstic Wardah Cosmetic</title>
         <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
-    <link type="text/css" rel="stylesheet" href="css/formstyling.css">
-    <link type="text/css" rel="stylesheet" href="css/pengguna.css">
 
 </head>
 
