@@ -106,8 +106,7 @@ if ($pemakai) {
                             <th colspan=\"5\" class='btable'>";
 
                             if ($ada == 1) {
-                                echo " <a class=\"nyala\" href=\"beli.php?id=" . $row[Kode_produk] . "
-                                        alt = \"beli sekarang\" title = \"beli sekarang\" > BELI</a >
+                                echo " <a class=\"nyala\" href='beli.php?id=$row[Kode_produk]' title = \"beli sekarang\" > BELI</a >
                     ";
                             }else{
                                 echo " <a class=\"nyala\" href=\"tidakbisamembeli.php\"

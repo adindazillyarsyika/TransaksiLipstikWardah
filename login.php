@@ -71,7 +71,7 @@ if ($pemakai) {
                              <div id=\"login\">
                                 <form action=\"pengguna.php\" method=\"post\">
                                     <label for=\"pengguna\">Username:</label><input type=\"text\" id=\"pengguna\" name=\"pengguna\" maxlength=\"12\">
-                                    <label for=\"pasowrd\">Password:</label><input type=\"text\" id=\"katasandi\" name=\"katasandi\" maxlength=\"20\" value='123456712'>
+                                    <label for=\"pasowrd\">Password:</label><input type=\"password\" id=\"katasandi\" name=\"katasandi\" maxlength=\"20\">
                                     <input type=\"submit\" name=\"masuk\" value=\"masuk\">
                                 </form>
                             </div>

@@ -342,3 +342,15 @@ section#home {
 h1.promoj {
     border: none;
 }
+
+#tombolya .a {
+    color: white;
+}
+
+a:link {
+    color: #42a1af;
+}
+
+a::visited {
+    color: #42a1af;
+}

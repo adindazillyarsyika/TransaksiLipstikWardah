@@ -5,7 +5,8 @@ $merek = $_GET['merek'];
 $sql = "SELECT * FROM online";
 $response = mysqli_query($conn, $sql);
 $pemakai = mysqli_fetch_array($response);
-$idnomor = $_GET['idnomor'];
+$ID_Produk = $_GET['id'];
+
 
 $username = $pemakai['username'];
 $password = $pemakai['password'];
@@ -14,20 +15,23 @@ $password = $pemakai['password'];
 if ($pemakai) {
     $ada = 1;
 }
-$sql = "SELECT username, nama, alamat, saldo FROM pengguna WHERE username='$username'";
+$sql = "SELECT * FROM penjual WHERE username='$username'";
 $response = mysqli_query($conn, $sql);
 $pembeli = mysqli_fetch_array($response);
 
-$nama = $pembeli['nama'];
-$alamat = $pembeli['alamat'];
-$saldo = $pembeli['saldo'];
+$ID_Penjual = $pembeli['ID_Penjual'];
+$nama_toko = $pembeli['nama_toko'];
+$alamat_toko = $pembeli['alamat_toko'];
+$username = $pembeli['username'];
 
-$sql = "SELECT nama, harga FROM $merek WHERE idnomor='$idnomor'";
+
+$sql = "SELECT * FROM produk WHERE Kode_produk='$ID_Produk'";
 $response = mysqli_query($conn, $sql);
 $item = mysqli_fetch_array($response);
 
-$namaitem = $item['nama'];
-$harga = $item['harga'];
+$kode_produk= $item['Kode_produk'];
+$jenis = $item['jenis'];
+$warna = $item['kode_warna'];
 
 
 ?>
@@ -36,8 +40,8 @@ $harga = $item['harga'];
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Tiga Sekawan Online Shop</title>
-    <link type="text/css" rel="stylesheet" href="styles.css">
+     <title>Lipstic Wardah Cosmetic</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/terimakasih.css">
     <link type="text/css" rel="stylesheet" href="css/beli.css">
 
@@ -45,33 +49,17 @@ $harga = $item['harga'];
 
 <body>
 
+<marquee>Selamat Datang di Lipstic Wardah Cosmetic, semoga anda senang dengan layanan dan produk kami</marquee>
 <a href="index.php">
     <header class="top">
-
-        <p id="logokita2">
-            <img src="images/logokita2.png" width="300px">
-        </p>
-        <p id="logokita">
-            <img src="images/logokita.png" width="300px">
-        </p>
-        <p id="gratis">
-            <img src="images/gratis3.png" width="200px">
-        </p>
-        <p id="aman">
-            <img src="images/transparan3.png" width="200px">
-        </p>
-        <p id="praktis">
-            <img src="images/aman3.png" width="200px">
-        </p>
-
+        <img src="images/wardah-logo.png" width="50%">
     </header>
 </a>
 
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="daftarproduk.php">Daftar Produk</a></li>
-        <li><a href="kontakkami.php">Kontak Kami</a></li>
+        <li><a href="kontak.php">Kontak Kami</a></li>
         <?php
         if ($ada == 1) {
             echo "
@@ -104,36 +92,33 @@ $harga = $item['harga'];
                                <div id=\"beli\">
                                     <table>
                                         <tr>
-                                            <td>Nama : </td>
-                                            <td>$nama</td>
+                                            <td>ID Penjual : </td>
+                                            <td>$ID_Penjual</td>
                                         </tr>
                                          <tr>
                                             <td>Username : </td>
                                             <td>$username</td>
                                         </tr>
-                                         <td>Alamat : </td>
-                                            <td>$alamat</td>
-                                        </tr>
-                                         <tr>
-                                            <td>Saldo : </td>
-                                            <td>Rp. $saldo.000,-</td>
+                                         <td>Alamat Toko: </td>
+                                            <td>$alamat_toko</td>
                                         </tr>
                                         <tr>
-                                            <td>Nama Item : </td>
-                                            <td>$namaitem</td>
+                                            <td>Kode Produk: </td>
+                                            <td>$kode_produk</td>
                                         </tr>
                                         <tr>
-                                            <td>Harga : </td>
-                                            <td>Rp. $harga.000,-</td>
+                                            <td>Jenis : </td>
+                                            <td>$jenis</td>
                                         </tr>
                                     </table>
-                                    <div id='tombolya'>
-                                            <a href='terimakasih.php?idnomor=$idnomor&&merek=$merek#parkir'>
-                                            <img src='images/tombolya.png'> </a>
+                                    <div>
+                                            <br><br>
+                                            <a class='lbeli' href='terimakasih.php?kode_produk=$kode_produk&&id_penjual=$ID_Penjual'>
+                                            Beli </a>
                                             
                                             <span class='tomboltidak'>
-                                            <a href='index.php'>
-                                            <img src='images/tomboltidak.png'
+                                            <a style='color: #42a1af' class='lbeli' href='index.php'>
+                                            Tidak
                                             </a>
                                             </span>
                                     </div>
@@ -167,10 +152,9 @@ $harga = $item['harga'];
 </div>
 
 <footer>
-    &copy; 2016 UAS Pemograman WEB I
+    &copy; Lipstic Wardah Cosmetic
     <br>
-    Dibuat oleh: Agung Santoso(1503113476), Haris Sucipto(1503123272), Mefprizon Muhamad(1503113413).
+   2016.
 </footer>
-
 
 </body>
